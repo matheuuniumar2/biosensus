@@ -3,7 +3,7 @@
 **Connecting Weather, Plant Physiology and Smarter Agricultural Decisions.**
 
 ![Status: Frontend Prototype](https://img.shields.io/badge/status-frontend%20prototype-orange)
-![Version: 0.1.0](https://img.shields.io/badge/version-0.1.0-blue)
+![Version: 2.0](https://img.shields.io/badge/version-2.0-blue)
 ![Stack: HTML, CSS, JavaScript](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JavaScript-147d64)
 ![License: Not specified](https://img.shields.io/badge/license-not%20specified-lightgrey)
 
@@ -23,7 +23,7 @@ BioSensus proposes bringing weather and plant physiology information together to
 
 ## Current Development Status
 
-**Frontend Prototype / Early Development — v0.1.0: Initial Frontend Prototype.**
+**Frontend Prototype / Early Development — v2.0: BioSensus Frontend Prototype.**
 
 This version records an early interface design, not a stable agricultural decision service. Dashboard values and chart series are hard-coded examples. The login script explicitly states that authentication is not connected. No backend, live weather feed, sensor connection, operational AI, or validated agronomic recommendation engine is included.
 
@@ -160,4 +160,6 @@ BioSensus is under development. Displayed data, status labels, and conclusions a
 
 ## Version History and Integrity
 
-See [CHANGELOG.md](CHANGELOG.md), [versioning guidance](docs/versions.md), and the [SHA-256 manifest of original files](docs/original-files.sha256). The v0.1.0 label identifies this first documented publication; it does not guarantee stability or imply that a GitHub release or Git tag already exists.
+See [CHANGELOG.md](CHANGELOG.md), [versioning guidance](docs/versions.md), and the [SHA-256 manifest of original files](docs/original-files.sha256). The owner identifies the current supplied files as **v2.0 — BioSensus**, following **v1.0 — Pulse**. The original GitHub publication temporarily used `v0.1.0` before this history was clarified; that label was publication metadata, not a separate application version. It remains visible in earlier commits.
+
+The original Pulse files are preserved on [history/pulse-v1.0](https://github.com/matheuuniumar2/biosensus/tree/history/pulse-v1.0) and tagged `v1.0`. The current BioSensus snapshot is tagged `v2.0`. These tags do not imply production readiness or published GitHub releases. According to the owner, the name changed because LG has a brand with the same name; this explanation has not been independently verified as a legal finding.

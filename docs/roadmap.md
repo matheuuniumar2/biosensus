@@ -1,6 +1,6 @@
 # Development Roadmap
 
-This roadmap describes intended directions, not delivery commitments. No dates are promised. Only the initial interface artifacts are present in v0.1.0.
+This roadmap describes intended directions, not delivery commitments. No dates are promised. Only the initial interface artifacts are present in v2.0.
 
 ## Phase 1: Frontend Prototype
 

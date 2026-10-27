@@ -32,4 +32,4 @@ Create a practical decision-support platform that helps agricultural producers u
 
 ## Publication boundaries
 
-The first documented version is v0.1.0. Original names, paths, contents, configuration, and images are preserved in their two supplied folders. Added documentation and Git configuration sit outside those folders. No license, deployment, tag, or release is implied by the publication package.
+The first documented version is v2.0. Original names, paths, contents, configuration, and images are preserved in their two supplied folders. Added documentation and Git configuration sit outside those folders. No license, deployment, tag, or release is implied by the publication package.
