@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULSE</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style_page_1.css">
+</head>
+<body>
+    <header class="navbar">
+        <img
+            src="/logo-biosenus.png"
+            alt="PULSE"
+            class="logo"
+        >
+        <span style="font-size: 15px;">BIOSENSUS</span>
+
+        <nav class="nav-links">
+            <a href="#"class="nav-link active"><i class="bi bi-house-fill"></i><span>Dashboard</span></a>
+            <a href="#"class="nav-link"><i class="bi bi-clock-history"></i><span>Histórico</span></a>
+            <a href="#"class="nav-link"><i class="bi bi-file-earmark-bar-graph"></i><span>Relatórios</span></a>
+            <a href="#"class="nav-link"><i class="bi bi-gear"></i><span>Configurações</span></a>
+        </nav>
+
+
+        <!-- DIREITA -->
+        <div class="navbar-right">
+            <button class="notification"><i class="bi bi-bell"></i><span class="notification-dot"></span></button>
+            <div class="nav-separator"></div>
+
+            <div class="user">
+
+
+                <div class="avatar">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+
+                <div class="user-info">
+                    <strong>Administrador</strong>
+                    <span>Fazenda Santa Rita</span>
+                </div>
+
+
+                <i class="bi bi-chevron-down user-arrow"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================
+         SIDEBAR
+    ===================================================== -->
+
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="farm">
+                <div class="farm-icon">
+                    <i class="bi bi-leaf"></i>
+                </div>
+                <div class="farm-info">
+                    <strong>
+                        Fazenda Santa Rita
+                    </strong>
+                    <span>
+                        São Paulo - SP
+                    </span>
+                </div>
+                <i class="bi bi-chevron-down farm-arrow"></i>
+            </div>
+
+
+            
+<!-- TÍTULO -->
+
+            <div class="plots-title">Talhões</div>
+
+
+            <!-- TALHÃO 03 -->
+
+            <button class="plot active">
+                <div class="plot-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div class="plot-info">
+                    <strong>Talhão 03</strong>
+
+                    <span> Soja | V5 | 42,5 ha</span>
+                </div>
+            </button>
+
+
+            <!-- TALHÃO 04 -->
+
+            <button class="plot">
+                <div class="plot-icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="plot-info">
+                    <strong>Talhão 04</strong>
+
+                    <span>Soja | V3 | 38,2 ha</span>
+                </div>
+            </button>
+
+
+            <!-- TALHÃO 05 -->
+
+            <button class="plot ">
+                <div class="plot-icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="plot-info">
+
+                    <strong>Talhão 05</strong>
+
+                    <span>Milho | V6 | 56,7 ha</span>
+                </div>  
+            </button>
+
+
+            <!-- TALHÃO 06 -->
+
+            <button class="plot">
+                <div class="plot-icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="plot-info">
+                    <strong>Talhão 06</strong>
+                    <span>Soja | R1 | 29,4 ha</span>
+                </div>
+            </button>
+
+
+            <!-- NOVO TALHÃO -->
+
+            <button class="new-plot">
+                <i class="bi bi-plus-lg"></i>
+                <span>Novo Talhão</span>
+            </button>
+        </div>
+
+
+
+        <!-- =================================================
+             FOTO
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+            <div class="farm-image">
+                <img src="/sidebar-image.png" alt="">
+            </div>
+
+            <div class="farm-message">
+                <p>
+                    Mais dados.<br>
+                    Melhores decisões.<br>
+                    Mais produtividade.
+                </p>
+            </div>
+        </div>
+    </aside>
+<main class="main">
+
+<section class="dashboard-top">
+
+
+    <!-- ======================================================
+         CARD — TEMPERATURA DE DOSSEL
+    ======================================================= -->
+
+    <div class="thermal-card">
+        <div class="thermal-header">
+
+            <div class="thermal-title">
+
+                <div class="thermal-icon">
+                    <i class="bi bi-thermometer-half"></i>
+                </div>
+
+                <div>
+
+                    <h2 style="font-size: 18px;">
+                        Temperatura de Dossel
+                    </h2>
+
+                    <span style="font-size: 12px;">
+                        Visão espacial da temperatura das plantas no talhão
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ==================================================
+             ÁREA DO MAPA
+        =================================================== -->
+
+        <div class="thermal-map">
+            <img
+                src="/talhão-ideal.png"
+                alt="Mapa térmico do Talhão 03"
+                class="thermal-image"
+            >
+            <div class="map-overlay"></div>
+
+
+    
+
+
+            <!-- =================================================
+                 ALERTA
+            ================================================== -->
+
+            <div class="thermal-alert">
+
+                <div class="alert-icon">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Condição de estresse térmico detectada
+                    </strong>
+
+                    <span>
+                        em 18% da área do talhão
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ESCALA DE TEMPERATURA
+            ================================================== -->
+
+            <div class="temperature-scale">
+
+                <span style="font-size: 10px;">Temperatura (°C)</span>
+
+
+                <div class="scale-content">
+
+                    <div class="scale-gradient"></div>
+
+                    <div class="scale-values">
+                        <span style="font-size: 12px;">45</span>
+                        <span style="font-size: 12px;">40</span>
+                        <span style="font-size: 12px;">35</span>
+                        <span style="font-size: 12px;">30</span>
+                        <span style="font-size: 12px;">25</span>
+                        <span style="font-size: 12px;">20</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================
+         CARD — CONDIÇÕES FISIOLÓGICAS
+    =========================================================== -->
+
+    <div class="physiology-card">
+        <div class="physiology-header">
+            <div>
+                <span class="section-label">
+                    TALHÃO 03
+                </span>
+                <h2>
+                    Condições Fisiológicas
+                </h2>
+
+            </div>
+
+            <div class="physiology-status">
+
+                <span></span>
+                Favorável
+            </div>
+        </div>
+
+
+        <!-- ==================================================
+             GRID — 8 CARDS
+        =================================================== -->
+
+        <div class="physiology-grid">
+
+
+            <!-- 01 TEMPERATURA FOLIAR -->
+
+            <div class="info-card">
+
+                <div class="info-icon green">
+                    <i class="bi bi-thermometer-half"></i>
+                </div>
+
+                <div class="info-content">
+
+                    <span>
+                        Temperatura foliar
+                    </span>
+
+                    <strong>
+                        27.6
+                        <small>°C</small>
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 DELTA T -->
+
+            <div class="info-card">
+
+                <div class="info-icon cyan">
+                    <i class="bi bi-thermometer"></i>
+                </div>
+
+                <div class="info-content">
+
+                    <span>
+                        ΔT Folha-Ar
+                    </span>
+
+                    <strong>
+                        -0.8
+                        <small>°C</small>
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 CONDUTÂNCIA -->
+
+            <div class="info-card">
+
+                <div class="info-icon green">
+                    <i class="bi bi-wind"></i>
+                </div>
+
+                <div class="info-content">
+
+                    <span>
+                        Condutância (gs)
+                    </span>
+
+                    <strong>
+                        0.32
+                        <small>mol/m²s</small>
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- 04 ESTRESSE HÍDRICO -->
+
+            <div class="info-card">
+
+                <div class="info-icon green">
+                    <i class="bi bi-droplet"></i>
+                </div>
+
+                <div class="info-content">
+
+                    <span>
+                        Estresse hídrico
+                    </span>
+
+                    <strong class="status-value">
+                        Baixo
+                    </strong>
+
+                    <small class="status-sub">
+                        Favorável
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- 05 UMIDADE DO SOLO -->
+
+            <div class="info-card">
+
+                <div class="info-icon cyan">
+                    <i class="bi bi-moisture"></i>
+                </div>
+
+                <div class="info-content">
+
+                    <span>
+                        Umidade do solo
+                    </span>
+
+                    <strong>
+                        24
+                        <small>%</small>
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- 06 VPD -->
+
+            <div class="info-card">
+
+                <div class="info-icon blue">
+                    <i class="bi bi-cloud-sun"></i>
+                </div>
+
+                <div class="info-content">
+
+                    <span>
+                        VPD
+                    </span>
+
+                    <strong>
+                        1.8
+                        <small>kPa</small>
+                    </strong>
+
+                    <small class="status-sub">
+                        Ideal
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- 07 RADIAÇÃO -->
+
+            <div class="info-card">
+
+                <div class="info-icon yellow">
+                    <i class="bi bi-sun"></i>
+                </div>
+
+                <div class="info-content">
+
+                    <span>
+                        Radiação
+                    </span>
+
+                    <strong>
+                        720
+                        <small>W/m²</small>
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- 08 FENOLOGIA -->
+
+            <div class="info-card">
+
+                <div class="info-icon green">
+                    <i class="bi bi-flower1"></i>
+                </div>
+
+                <div class="info-content">
+
+                    <span>
+                        Estádio fenológico
+                    </span>
+
+                    <strong>
+                        V5
+                    </strong>
+
+                    <small class="status-sub">
+                        Vegetativo
+                    </small>
+
+                </div>
+
+            </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- =========================================================
+     CARD — CONDIÇÕES METEOROLÓGICAS
+========================================================= -->
+
+<section class="weather-card">
+
+    <!-- CABEÇALHO -->
+
+    <div class="weather-header">
+
+        <div class="weather-title">
+
+            <div class="weather-title-icon">
+                <i class="bi bi-cloud-sun"></i>
+            </div>
+
+            <div>
+
+                <span class="weather-label">
+                    TALHÃO 03
+                </span>
+
+                <h2 style="font-size: 18px;">
+                    Condições Meteorológicas
+                </h2>
+
+                <p style="font-size: 12px;">
+                    Condições ambientais atuais no talhão
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="weather-update">
+
+            <i class="bi bi-clock"></i>
+
+            Atualizado agora
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         8 CARDS HORIZONTAIS
+    ====================================================== -->
+
+    <div class="weather-grid">
+
+
+        <!-- 01 TEMPERATURA -->
+
+        <div class="weather-info-card">
+
+            <div class="weather-icon green">
+                <i class="bi bi-thermometer-half"></i>
+            </div>
+
+            <div class="weather-info">
+
+                <span>
+                    Temperatura do ar
+                </span>
+
+                <strong>
+                    28.4 <small>°C</small>
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- 02 UMIDADE -->
+
+        <div class="weather-info-card">
+
+            <div class="weather-icon cyan">
+                <i class="bi bi-droplet"></i>
+            </div>
+
+            <div class="weather-info">
+
+                <span>
+                    Umidade relativa
+                </span>
+
+                <strong>
+                    62 <small>%</small>
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- 03 VENTO -->
+
+        <div class="weather-info-card">
+
+            <div class="weather-icon blue">
+                <i class="bi bi-wind"></i>
+            </div>
+
+            <div class="weather-info">
+
+                <span>
+                    Velocidade do vento
+                </span>
+
+                <strong>
+                    8.2 <small>km/h</small>
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- 04 RADIAÇÃO -->
+
+        <div class="weather-info-card">
+
+            <div class="weather-icon yellow">
+                <i class="bi bi-sun"></i>
+            </div>
+
+            <div class="weather-info">
+
+                <span>
+                    Radiação solar
+                </span>
+
+                <strong>
+                    720 <small>W/m²</small>
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- 05 VPD -->
+
+        <div class="weather-info-card">
+
+            <div class="weather-icon cyan">
+                <i class="bi bi-cloud-sun"></i>
+            </div>
+
+            <div class="weather-info">
+
+                <span>
+                    VPD
+                </span>
+
+                <strong>
+                    1.8 <small>kPa</small>
+                </strong>
+
+                <small class="weather-status">
+                    Ideal
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- 06 PRECIPITAÇÃO -->
+
+        <div class="weather-info-card">
+
+            <div class="weather-icon blue">
+                <i class="bi bi-cloud-rain"></i>
+            </div>
+
+            <div class="weather-info">
+
+                <span>
+                    Precipitação
+                </span>
+
+                <strong>
+                    0 <small>mm</small>
+                </strong>
+
+                <small class="weather-status">
+                    Sem chuva
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- 07 COBERTURA -->
+
+        <div class="weather-info-card">
+
+            <div class="weather-icon cyan">
+                <i class="bi bi-cloud"></i>
+            </div>
+
+            <div class="weather-info">
+
+                <span>
+                    Nebulosidade
+                </span>
+
+                <strong>
+                    18 <small>%</small>
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- 08 CONDIÇÃO -->
+
+        <div class="weather-info-card">
+
+            <div class="weather-icon green">
+                <i class="bi bi-check-circle"></i>
+            </div>
+
+            <div class="weather-info">
+
+                <span>
+                    Condição para aplicação
+                </span>
+
+                <strong class="weather-good">
+                    Favorável
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================================================
+     EVOLUÇÃO — GRÁFICOS
+========================================================= -->
+
+<section class="evolution-section">
+
+    <!-- =====================================================
+         GRÁFICO METEOROLÓGICO
+    ====================================================== -->
+
+    <div class="evolution-card">
+
+        <div class="evolution-header">
+
+            <div>
+                <h3 style="font-size: 18px;">
+                    EVOLUÇÃO METEOROLÓGICA
+                    <span>(últimas 24h)</span>
+                </h3>
+            </div>
+
+        </div>
+
+        <div class="chart-legend">
+
+            <span style="font-size: 12px;">
+                <i class="legend-line temperature"></i>
+                Temperatura (°C)
+            </span >
+
+            <span style="font-size: 12px;">
+                <i class="legend-line humidity"></i>
+                Umidade (%)
+            </span>
+
+            <span style="font-size: 12px;">
+                <i class="legend-line vpd"></i>
+                VPD (kPa)
+            </span>
+
+            <span style="font-size: 12px;">
+                <i class="legend-line radiation"></i>
+                Radiação (W/m²)
+            </span>
+
+        </div>
+
+        <div class="chart-container">
+
+            <canvas id="meteorologicalChart"></canvas>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         GRÁFICO FISIOLÓGICO
+    ====================================================== -->
+
+    <div class="evolution-card">
+
+        <div class="evolution-header">
+
+            <div>
+                <h3 style="font-size: 18px;">
+                    EVOLUÇÃO FISIOLÓGICA
+                    <span>(últimas 24h)</span>
+                </h3>
+            </div>
+
+        </div>
+
+        <div class="chart-legend">
+
+            <span style="font-size: 12px;">
+                <i class="legend-line leaf-temperature"></i>
+                Temperatura foliar
+            </span>
+
+            <span style="font-size: 12px;">
+                <i class="legend-line delta"></i>
+                ΔT
+            </span>
+
+            <span style="font-size: 12px;">
+                <i class="legend-line conductance"></i>
+                gs (condutância)
+            </span>
+
+        </div>
+
+        <div class="chart-container">
+
+            <canvas id="physiologicalChart"></canvas>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONCLUSÃO DO SISTEMA
+========================================================= -->
+
+<section class="system-conclusion">
+
+    <!-- ÍCONE -->
+
+    <div class="conclusion-icon">
+
+        <i class="bi bi-leaf"></i>
+
+    </div>
+
+
+    <!-- STATUS -->
+
+    <div class="conclusion-main">
+
+        <span class="conclusion-label">
+            CONCLUSÃO DO SISTEMA
+        </span>
+
+        <strong>
+            FAVORÁVEL
+        </strong>
+
+        <p>
+            para aplicação foliar
+        </p>
+
+    </div>
+
+
+    <!-- DIVISÓRIA -->
+
+    <div class="conclusion-divider"></div>
+
+
+    <!-- FISIOLOGIA -->
+
+    <div class="conclusion-item">
+
+        <div class="conclusion-item-icon">
+
+            <i class="bi bi-diagram-3"></i>
+
+        </div>
+
+        <div>
+
+            <span class="conclusion-item-title">
+                Fisiologia da planta
+            </span>
+
+            <p>
+                <i class="bi bi-check-circle-fill"></i>
+                Indicadores dentro da faixa ideal,
+                sem sinais de estresse relevante.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- DIVISÓRIA -->
+
+    <div class="conclusion-divider"></div>
+
+
+    <!-- CONDIÇÕES OPERACIONAIS -->
+
+    <div class="conclusion-item">
+
+        <div class="conclusion-item-icon">
+
+            <i class="bi bi-cloud-sun"></i>
+
+        </div>
+
+        <div>
+
+            <span class="conclusion-item-title">
+                Condições operacionais
+            </span>
+
+            <p>
+                <i class="bi bi-check-circle-fill"></i>
+                Temperatura, umidade e vento
+                dentro da faixa recomendada.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+</main>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+const hours = [
+    '00:00',
+    '02:00',
+    '04:00',
+    '06:00',
+    '08:00',
+    '10:00',
+    '12:00',
+    '14:00',
+    '16:00',
+    '18:00',
+    '20:00',
+    '22:00'
+];
+
+
+
+/* =========================================================
+   GRÁFICO METEOROLÓGICO
+========================================================= */
+
+new Chart(
+    document.getElementById('meteorologicalChart'),
+    {
+
+        type: 'line',
+
+        data: {
+
+            labels: hours,
+
+            datasets: [
+
+                {
+                    label: 'Temperatura',
+                    data: [
+                        30, 30, 29, 27,
+                        25, 26, 27, 28,
+                        30, 31, 30, 28
+                    ],
+
+                    borderColor: '#f59e0b',
+
+                    backgroundColor: 'transparent',
+
+                    borderWidth: 2,
+
+                    tension: .4,
+
+                    pointRadius: 0,
+
+                    yAxisID: 'temperature'
+                },
+
+
+                {
+                    label: 'Umidade',
+                    data: [
+                        72, 70, 68, 65,
+                        58, 50, 43, 48,
+                        55, 60, 68, 72
+                    ],
+
+                    borderColor: '#22d3ee',
+
+                    backgroundColor: 'transparent',
+
+                    borderWidth: 2,
+
+                    tension: .4,
+
+                    pointRadius: 0,
+
+                    yAxisID: 'humidity'
+                },
+
+
+                {
+                    label: 'VPD',
+                    data: [
+                        0.9, 0.9, 1.0, 1.1,
+                        1.4, 1.6, 1.9, 2.1,
+                        1.9, 1.6, 1.3, 1.0
+                    ],
+
+                    borderColor: '#39e75f',
+
+                    backgroundColor: 'transparent',
+
+                    borderWidth: 2,
+
+                    tension: .4,
+
+                    pointRadius: 0,
+
+                    yAxisID: 'vpd'
+                },
+
+
+                {
+                    label: 'Radiação',
+                    data: [
+                        0, 0, 0, 50,
+                        250, 500, 700, 720,
+                        550, 300, 80, 0
+                    ],
+
+                    borderColor: '#fbbf24',
+
+                    backgroundColor: 'rgba(251,191,36,.08)',
+
+                    borderWidth: 2,
+
+                    tension: .4,
+
+                    pointRadius: 0,
+
+                    fill: true,
+
+                    yAxisID: 'radiation'
+                }
+
+            ]
+
+        },
+
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            interaction: {
+
+                mode: 'index',
+
+                intersect: false
+
+            },
+
+            plugins: {
+
+                legend: {
+                    display: false
+                },
+
+                tooltip: {
+
+                    backgroundColor: '#061b27',
+
+                    borderColor: '#174253',
+
+                    borderWidth: 1,
+
+                    titleColor: '#e5eff2',
+
+                    bodyColor: '#8da2ac'
+
+                }
+
+            },
+
+
+            scales: {
+
+                x: {
+
+                    grid: {
+
+                        color: 'rgba(30,70,85,.25)'
+
+                    },
+
+                    ticks: {
+
+                        color: '#607984',
+
+                        font: {
+                            size: 7
+                        }
+
+                    },
+
+                    border: {
+                        display: false
+                    }
+
+                },
+
+
+                temperature: {
+
+                    position: 'left',
+
+                    min: 0,
+
+                    max: 40,
+
+                    grid: {
+
+                        color: 'rgba(30,70,85,.25)'
+
+                    },
+
+                    ticks: {
+
+                        color: '#607984',
+
+                        font: {
+                            size: 7
+                        },
+
+                        stepSize: 10
+
+                    },
+
+                    border: {
+                        display: false
+                    }
+
+                },
+
+
+                humidity: {
+
+                    position: 'right',
+
+                    min: 0,
+
+                    max: 100,
+
+                    display: false
+
+                },
+
+
+                vpd: {
+
+                    position: 'right',
+
+                    min: 0,
+
+                    max: 3,
+
+                    display: false
+
+                },
+
+
+                radiation: {
+
+                    position: 'right',
+
+                    min: 0,
+
+                    max: 800,
+
+                    display: false
+
+                }
+
+            }
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   GRÁFICO FISIOLÓGICO
+========================================================= */
+
+new Chart(
+    document.getElementById('physiologicalChart'),
+    {
+
+        type: 'line',
+
+        data: {
+
+            labels: hours,
+
+            datasets: [
+
+                {
+                    label: 'Temperatura foliar',
+
+                    data: [
+                        30, 30, 29, 29,
+                        31, 33, 35, 36,
+                        37, 35, 32, 31
+                    ],
+
+                    borderColor: '#f59e0b',
+
+                    borderWidth: 2,
+
+                    tension: .4,
+
+                    pointRadius: 0,
+
+                    yAxisID: 'temperature'
+                },
+
+
+                {
+                    label: 'ΔT',
+
+                    data: [
+                        0, -0.2, -0.5, -0.8,
+                        -0.4, 0.2, 0.8, 1.1,
+                        0.8, 0.3, -0.2, -0.5
+                    ],
+
+                    borderColor: '#39e75f',
+
+                    borderWidth: 2,
+
+                    tension: .4,
+
+                    pointRadius: 0,
+
+                    yAxisID: 'delta'
+
+                },
+
+
+                {
+                    label: 'Condutância',
+
+                    data: [
+                        .22, .20, .18, .17,
+                        .22, .25, .28, .30,
+                        .28, .24, .21, .20
+                    ],
+
+                    borderColor: '#38bdf8',
+
+                    borderWidth: 2,
+
+                    tension: .4,
+
+                    pointRadius: 0,
+
+                    yAxisID: 'conductance'
+
+                }
+
+            ]
+
+        },
+
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            interaction: {
+
+                mode: 'index',
+
+                intersect: false
+
+            },
+
+
+            plugins: {
+
+                legend: {
+                    display: false
+                },
+
+                tooltip: {
+
+                    backgroundColor: '#061b27',
+
+                    borderColor: '#174253',
+
+                    borderWidth: 1,
+
+                    titleColor: '#e5eff2',
+
+                    bodyColor: '#8da2ac'
+
+                }
+
+            },
+
+
+            scales: {
+
+                x: {
+
+                    grid: {
+
+                        color: 'rgba(30,70,85,.25)'
+
+                    },
+
+                    ticks: {
+
+                        color: '#607984',
+
+                        font: {
+                            size: 7
+                        }
+
+                    },
+
+                    border: {
+                        display: false
+                    }
+
+                },
+
+
+                temperature: {
+
+                    position: 'left',
+
+                    min: 20,
+
+                    max: 40,
+
+                    ticks: {
+
+                        color: '#607984',
+
+                        font: {
+                            size: 7
+                        },
+
+                        stepSize: 5
+
+                    },
+
+                    grid: {
+
+                        color: 'rgba(30,70,85,.25)'
+
+                    },
+
+                    border: {
+                        display: false
+                    }
+
+                },
+
+
+                delta: {
+
+                    position: 'right',
+
+                    min: -2,
+
+                    max: 2,
+
+                    display: false
+
+                },
+
+
+                conductance: {
+
+                    position: 'right',
+
+                    min: 0,
+
+                    max: .6,
+
+                    display: false
+
+                }
+
+            }
+
+        }
+
+    }
+
+);
+
+</script>
+
+</body>
+
+</html>

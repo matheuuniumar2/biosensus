@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOSENSUS | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="login-page">
+
+        <!-- Área visual -->
+        <section class="visual-side">
+            <div class="visual-overlay"></div>
+
+            <div class="brand" aria-label="BIOSENSUS">
+                <img class="brand-logo" src="/logo-biosenus.png" alt="Logo BIOSENSUS">
+                <h1>BIOSENSUS</h1>
+            </div>
+        </section>
+
+        <!-- Área de login -->
+        <section class="login-side">
+            <div class="login-card">
+
+                <div class="brand-mobile" aria-label="BIOSENSUS">
+                    <img class="brand-logo" src="/logo-biosenus.png" alt="Logo BIOSENSUS">
+                    <h1>BIOSENSUS</h1>
+                </div>
+
+                <div class="welcome">
+                    <h2>Bem-vindo de volta!</h2>
+                    <p>Acesse sua conta para continuar<br>acompanhando seu talhão.</p>
+                </div>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+                        <label for="email">E-mail ou usuário</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">◯</span>
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                placeholder="E-mail ou usuário"
+                                autocomplete="username"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">▣</span>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Senha"
+                                autocomplete="current-password"
+                                required
+                            >
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                id="togglePassword"
+                                aria-label="Mostrar senha"
+                            >◉</button>
+                        </div>
+                    </div>
+
+                    <div class="login-options">
+                        <label class="remember">
+                            <input type="checkbox" id="remember">
+                            <span class="checkmark"></span>
+                            <span>Lembrar de mim</span>
+                        </label>
+
+                        <a href="#" id="forgotPassword">Esqueceu sua senha?</a>
+                    </div>
+
+                    <button type="submit" class="login-button">
+                        <span>Entrar</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+                    <p class="status-message" id="statusMessage"></p>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

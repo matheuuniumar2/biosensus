@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #031719;
+    --panel: #06191b;
+    --border: rgba(111, 198, 195, 0.30);
+    --text: #f4f8f8;
+    --muted: #9aaeb0;
+    --accent: #39e75f;
+    --accent-2: #39e75f;
+    --field: rgba(255, 255, 255, 0.025);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 57% 43%;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+/* =========================
+   ÁREA ESQUERDA
+========================= */
+
+.visual-side {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image:
+        linear-gradient(90deg, rgba(1, 20, 21, 0.15), rgba(1, 20, 21, 0.20)),
+        url("biosensus-background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.visual-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(2, 23, 25, 0.18), transparent 35%),
+        linear-gradient(0deg, rgba(1, 18, 19, 0.38), transparent 45%);
+    pointer-events: none;
+}
+
+.brand {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    z-index: 3;
+    text-align: center;
+}
+
+.brand-logo {
+    display: block;
+    width: clamp(220px, 8vw, 412px);
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.25));
+}
+
+.brand h1,
+.brand-mobile h1 {
+    font-size: clamp(2.3rem, 4vw, 4.2rem);
+    font-weight: 500;
+    letter-spacing: 0.19em;
+    color: #f5f8f8;
+    white-space: nowrap;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.10);
+}
+
+/* =========================
+   ÁREA DIREITA
+========================= */
+
+.login-side {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background:
+        radial-gradient(circle at 80% 10%, rgba(11, 82, 81, 0.16), transparent 30%),
+        #031719;
+    border-left: 1px solid rgba(87, 160, 160, 0.10);
+}
+
+.login-card {
+    width: min(100%, 500px);
+    padding: 35px 0;
+}
+
+.brand-mobile {
+    display: none;
+}
+
+.welcome {
+    margin-bottom: 38px;
+}
+
+.welcome h2 {
+    font-size: clamp(1.7rem, 2.2vw, 2.25rem);
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: -0.03em;
+}
+
+.welcome p {
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+/* =========================
+   CAMPOS
+========================= */
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #c7d3d3;
+    font-size: 0.82rem;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 58px;
+    padding: 0 50px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: var(--field);
+    color: var(--text);
+    transition: 0.25s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: #708486;
+}
+
+.input-wrapper input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(22, 224, 176, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.input-icon {
+    position: absolute;
+    left: 18px;
+    color: #91a8aa;
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 17px;
+    border: none;
+    background: transparent;
+    color: #91a8aa;
+    font-size: 0.85rem;
+}
+
+.toggle-password:hover {
+    color: var(--accent);
+}
+
+/* =========================
+   OPÇÕES
+========================= */
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 0 30px;
+    font-size: 0.78rem;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #9db0b1;
+    cursor: pointer;
+}
+
+.remember input {
+    display: none;
+}
+
+.checkmark {
+    width: 19px;
+    height: 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #39e75f;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.remember input:checked + .checkmark {
+    background: var(--accent);
+}
+
+.remember input:checked + .checkmark::after {
+    content: "✓";
+    color: #02201b;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.login-options a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.login-options a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+.login-button {
+    width: 100%;
+    height: 58px;
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: #02201b;
+    background: linear-gradient(90deg, #39e75f, #3fc75d);
+    font-weight: 600;
+    transition: 0.25s ease;
+    box-shadow: 0 8px 25px rgba(20, 218, 174, 0.12);
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(20, 218, 174, 0.22);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.arrow {
+    font-size: 1.25rem;
+    transition: 0.2s ease;
+}
+
+.login-button:hover .arrow {
+    transform: translateX(4px);
+}
+
+.status-message {
+    min-height: 20px;
+    margin-top: 15px;
+    text-align: center;
+    color: var(--accent);
+    font-size: 0.82rem;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+    .login-page {
+        grid-template-columns: 1fr;
+    }
+
+    .visual-side {
+        display: none;
+    }
+
+    .login-side {
+        padding: 28px;
+    }
+
+    .brand-mobile {
+        display: flex;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+
+    .brand-mobile h1 {
+        font-size: 2.2rem;
+    }
+
+    .login-card {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-side {
+        padding: 22px;
+    }
+
+    .brand-mobile {
+        margin-bottom: 38px;
+    }
+
+    .welcome {
+        margin-bottom: 30px;
+    }
+
+    .welcome h2 {
+        font-size: 1.55rem;
+    }
+
+    .login-options {
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .login-options a {
+        text-align: right;
+    }
+}

@@ -1,0 +1,1670 @@
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background: #020d15;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        }
+
+        .main-content {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+}
+
+
+        /* NAVBAR */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            padding: 0 28px;
+            background: #03131e;
+            border-bottom: 1px solid #123242;
+            z-index: 1000;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            width: 70px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+
+        /* =====================================================
+           LINKS DA NAVBAR
+        ===================================================== */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 120px;
+            margin: auto;
+        }
+
+
+        .nav-link {
+            height: 36px;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #718896;
+            text-decoration: none;
+            font-size: 12px;
+            border-radius: 6px;
+            transition: 0.2s ease;
+            
+        }
+
+
+        .nav-link i {
+            font-size: 14px;
+        }
+
+
+        .nav-link:hover {
+            color: #dce8ec;
+            background: rgba(255,255,255,0.04);
+        }
+
+
+        /* LINK ATIVO */
+
+        .nav-link.active {
+            color: #39e75f;
+            background: rgba(0, 150, 85, 0.20);
+        }
+
+
+        .nav-link.active i {
+            color: #39e75f;
+        }
+
+
+        /* =====================================================
+           ÁREA DIREITA DA NAVBAR
+        ===================================================== */
+
+        .navbar-right {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+
+        /* =====================================================
+           NOTIFICAÇÃO
+        ===================================================== */
+
+        .notification {
+            position: relative;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: transparent;
+            color: #8da2af;
+            cursor: pointer;
+        }
+
+
+        .notification i {
+            font-size: 16px;
+        }
+
+
+        .notification-dot {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #39e75f;
+            box-shadow: 0 0 8px #39e75f;
+        }
+
+
+        /* =====================================================
+           SEPARADOR
+        ===================================================== */
+
+        .nav-separator {
+            width: 1px;
+            height: 28px;
+            background: #17303d;
+        }
+
+
+        /* =====================================================
+           USUÁRIO
+        ===================================================== */
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            cursor: pointer;
+        }
+
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(
+                145deg,
+                #dce8ed,
+                #718897
+            );
+            color: #405867;
+        }
+
+
+        .avatar i {
+            font-size: 17px;
+        }
+
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .user-info strong {
+            color: #dce7eb;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+
+        .user-info span {
+            color: #657b88;
+            font-size: 8px;
+            margin-top: 2px;
+        }
+
+
+        .user-arrow {
+            color: #647c89;
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+
+        /* =====================================================
+           SIDEBAR
+        ===================================================== */
+
+        .sidebar {
+            position: fixed;
+            top: 72px;
+            left: 10px;
+            bottom: 10px;
+            width: 200px;
+            background: #03131e;
+            border: 1px solid #17405a;
+            border-radius: 7px;
+            overflow: hidden;
+            z-index: 900;
+            display: flex;
+            flex-direction: column;
+
+            
+        }
+
+
+        /* =====================================================
+           PARTE SUPERIOR DO SIDEBAR
+        ===================================================== */
+
+        .sidebar-top {
+            padding: 14px 11px 10px;
+        }
+
+
+        /* =====================================================
+           FAZENDA
+        ===================================================== */
+
+        .farm {
+            width: 100%;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            padding: 7px;
+            border: 1px solid #124152;
+            border-radius: 7px;
+            background: #041b27;
+            gap: 8px;
+        }
+
+
+        .farm-icon {
+            width: 27px;
+            height: 27px;
+            min-width: 27px;
+            border: 1px solid #39e75f;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #39e75f;
+            font-size: 13px;
+        }
+
+
+        .farm-info {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .farm-info strong {
+            color: #dce8ec;
+            font-size: 10px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+        .farm-info span {
+            color: #6d8490;
+            font-size: 8px;
+            margin-top: 3px;
+        }
+
+
+        .farm-arrow {
+            color: #657d8a;
+            font-size: 19px;
+        }
+
+
+        /* =====================================================
+           TÍTULO TALHÕES
+        ===================================================== */
+
+        .plots-title {
+            margin:14px 4px 7px;
+            color: #718995;
+            font-size: 9px;
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           TALHÃO
+        ===================================================== */
+
+        .plot {
+            width: 100%;
+            height: 42px;
+            padding: 6px 7px;
+            margin-bottom: 3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            border-radius: 7px;
+            background: transparent;
+            color: white;
+            text-align: left;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s ease;
+        }
+
+
+        .plot:hover {
+            background: rgba(255,255,255,0.04);
+        }
+
+
+        /* TALHÃO SELECIONADO */
+
+        .plot.active {
+            background: linear-gradient(
+                90deg,
+                #087548,
+                #078f5b
+            );
+        }
+
+
+        .plot-icon {
+            width: 21px;
+            min-width: 21px;
+            display: flex;
+            justify-content: center;
+            color: #708895;
+            font-size: 13px;
+        }
+
+
+        .plot.active .plot-icon {
+            color: #39e75f;
+        }
+
+
+        .plot-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .plot-info strong {
+            color: #cddce1;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+
+        .plot.active .plot-info strong {
+            color: white;
+        }
+
+
+        .plot-info span {
+            color: #718793;
+            font-size: 9px;
+            margin-top: 3px;
+        }
+
+
+        .plot.active .plot-info span {
+            color: #b7d6dc;
+        }
+
+
+        /* =====================================================
+           NOVO TALHÃO
+        ===================================================== */
+
+        .new-plot {
+            width: 100%;
+            height: 26px;
+            margin-top: 8px;
+            border: none;
+            border-radius: 6px;
+            background: #07935b;
+            color: #e4fff0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            font-family: inherit;
+            font-size: 12px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+
+        .new-plot:hover {
+            background: #0aa86a;
+        }
+
+
+        .new-plot i {
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           PARTE INFERIOR DO SIDEBAR
+        ===================================================== */
+
+        .sidebar-bottom {
+            position: relative;
+            flex: 1;
+            min-height: 250px;
+            overflow: hidden;
+        }
+
+
+        /* =====================================================
+           FOTO DA LAVOURA
+        ===================================================== */
+
+        .farm-image {
+            position:absolute;
+            inset: 0;
+            background-image:
+
+                linear-gradient(
+                    to bottom,
+                    rgba(3,19,30,0.05),
+                    rgba(3,19,30,0.15) 35%,
+                    rgba(2,13,21,0.95) 100%
+                ),
+
+                url("img/lavoura.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /* =====================================================
+           TEXTO SOBRE A FOTO
+        ===================================================== */
+
+        .farm-message {
+            position: absolute;
+            left: 18px;
+            bottom: 28px;
+            z-index: 2;
+        }
+
+
+        .farm-message p {
+            color: #e4eff2;
+            font-size: 9px;
+            line-height: 1.5;
+            font-weight: 500;
+            text-shadow:0 2px 8px rgba(0,0,0,0.9);
+        }
+
+
+        /* =====================================================
+           ÁREA PRINCIPAL
+        ===================================================== */
+
+        .main {
+            margin-left: 188px;
+            padding-top: 62px;
+            min-height: 100vh;
+        }
+
+
+        /* =====================================================
+           ESPAÇO PARA O SLOGAN
+        ===================================================== */
+
+        .slogan {
+            padding: 25px 30px;
+            color: #7e96a3;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVO
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+
+                margin-left: 30px;
+
+            }
+
+            .nav-link {
+
+                padding: 0 9px;
+
+            }
+
+            .nav-link span {
+
+                display: none;
+
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .nav-links {
+
+                display: none;
+
+            }
+
+            .user-info,
+            .user-arrow {
+
+                display: none;
+
+            }
+
+            .sidebar {
+
+                width: 145px;
+
+            }
+
+            .main {
+
+                margin-left: 165px;
+
+            }
+
+        }
+
+
+
+
+        /* ==========================================================
+   DASHBOARD — BLOCO SUPERIOR
+========================================================== */
+
+.dashboard-top {
+    width: 100%;
+    padding: 10px 18px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-left: 16px;
+}
+
+
+
+
+/* ==========================================================
+   CARD TÉRMICO
+========================================================== */
+
+.thermal-card,
+.physiology-card {
+    background: #041722;
+    border: 1px solid #123242;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.thermal-card {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   CABEÇALHO TÉRMICO
+========================================================== */
+
+.thermal-header {
+    height: 65px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #123242;
+}
+
+
+.thermal-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.thermal-icon {
+    width: 31px;
+    height: 31px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #39e75f;
+    background: rgba(57,231,95,0.08);
+    border: 1px solid rgba(57,231,95,0.20);
+}
+
+
+.thermal-icon i {
+    font-size: 17px;
+}
+
+
+.thermal-title h2 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e4eef2;
+}
+
+
+.thermal-title span {
+    display: block;
+    margin-top: 3px;
+    font-size: 8px;
+    color: #708996;
+}
+
+
+/* ==========================================================
+   BOTÕES TÉRMICA / NDVI
+========================================================== */
+
+.thermal-buttons {
+    display: flex;
+    border: 1px solid #174052;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+
+.thermal-button {
+    height: 28px;
+    padding: 0 13px;
+    border: none;
+    background: transparent;
+    color: #6e8795;
+    font-family: inherit;
+    font-size: 8px;
+    cursor: pointer;
+}
+
+
+.thermal-button.active {
+    background: #08784b;
+    color: #dfffea;
+}
+
+
+/* ==========================================================
+   MAPA
+========================================================== */
+
+.thermal-map {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: #020d15;
+}
+
+.thermal-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    
+    object-fit: contain;
+
+   
+    object-position: center;
+
+    background: #020d15;
+}
+
+
+
+
+/* ==========================================================
+   ALERTA
+========================================================== */
+
+.thermal-alert {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    min-width: 180px;
+    height: 38px;
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(13, 20, 25, 0.90);
+    border: 1px solid #c63b3b;
+    border-radius: 7px;
+    backdrop-filter: blur(8px);
+}
+
+
+.alert-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff5757;
+}
+
+
+.alert-icon i {
+    font-size: 15px;
+}
+
+
+.thermal-alert strong {
+    display: block;
+    color: #ff7777;
+    font-size: 7px;
+    font-weight: 600;
+}
+
+
+.thermal-alert span {
+    display: block;
+    color: #b9c6ca;
+    font-size: 6px;
+    margin-top: 3px;
+}
+
+
+/* ==========================================================
+   ESCALA
+========================================================== */
+
+.temperature-scale {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 58px;
+    padding: 5px;
+    color: white;
+}
+
+
+.temperature-scale > span {
+    display: block;
+    font-size: 7px;
+    margin-bottom: 8px;
+}
+
+
+.scale-content {
+    display: flex;
+    gap: 7px;
+}
+
+
+.scale-gradient {
+    width: 12px;
+    height: 210px;
+    border-radius: 3px;
+    background: linear-gradient(
+        to bottom,
+        #ff2020,
+        #ff6500,
+        #ffd900,
+        #32e45d,
+        #00b9e8,
+        #154fff,
+        #1500d9
+    );
+
+}
+
+
+.scale-values {
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.scale-values span {
+    font-size: 7px;
+    color: #e3ecef;
+}
+
+
+/* ==========================================================
+   CARD FISIOLÓGICO
+========================================================== */
+
+.physiology-card {
+    padding: 14px;
+}
+
+
+/* CABEÇALHO */
+
+.physiology-header {
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #123242;
+    margin-bottom: 12px;
+}
+
+
+.section-label {
+    color: #39e75f;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+.physiology-header h2 {
+    margin-top: 3px;
+    font-size: 18px;
+    color: #e4eef2;
+    font-weight: 600;
+}
+
+
+.physiology-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: rgba(57,231,95,0.07);
+    border: 1px solid rgba(57,231,95,0.22);
+    color: #39e75f;
+    font-size: 12px;
+}
+
+
+.physiology-status span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #39e75f;
+    box-shadow: 0 0 7px #39e75f;
+}
+
+
+/* ==========================================================
+   GRID DOS 8 CARDS
+========================================================== */
+
+.physiology-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+}
+
+
+/* ==========================================================
+   INFO CARD
+========================================================== */
+
+.info-card {
+    min-height: 67px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #061c28;
+    border: 1px solid #123542;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+
+.info-card:hover {
+    border-color: rgba(57,231,95,0.35);
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================
+   ÍCONES
+========================================================== */
+
+.info-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+
+.info-icon i {
+    font-size: 15px;
+}
+
+
+.info-icon.green {
+    color: #39e75f;
+    background: rgba(57,231,95,0.08);
+    border: 1px solid rgba(57,231,95,0.18);
+}
+
+
+.info-icon.cyan {
+    color: #22d3ee;
+    background: rgba(34,211,238,0.08);
+    border: 1px solid rgba(34,211,238,0.18);
+}
+
+
+.info-icon.blue {
+    color: #38bdf8;
+    background: rgba(56,189,248,0.08);
+    border: 1px solid rgba(56,189,248,0.18);
+}
+
+
+.info-icon.yellow {
+    color: #fbbf24;
+    background: rgba(251,191,36,0.08);
+    border: 1px solid rgba(251,191,36,0.18);
+}
+
+
+/* ==========================================================
+   INFORMAÇÕES
+========================================================== */
+
+.info-content {
+    min-width: 0;
+}
+
+
+.info-content > span {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+
+.info-content strong {
+    color: #e5eff2;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+.info-content strong small {
+    font-size: 8px;
+    color: #8198a4;
+    margin-left: 2px;
+}
+
+
+.status-value {
+    display: block;
+    color: #39e75f !important;
+    font-size: 14px !important;
+}
+
+
+.status-sub {
+    display: block;
+    color: #68818d;
+    font-size: 7px;
+    margin-top: 2px;
+}
+
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .dashboard-top {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-top {
+
+        padding: 12px;
+
+    }
+
+    .thermal-header {
+
+        height: auto;
+
+        padding: 10px;
+
+        gap: 10px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .thermal-map {
+
+        height: 280px;
+
+    }
+
+}
+
+
+
+       /* =========================================================
+   CARD METEOROLÓGICO
+========================================================= */
+
+.weather-card {
+    width: 100%;
+    margin-top: 12px;
+    width: calc(100% - 22px);
+    padding: 14px;
+    background: #041722;
+    border: 1px solid #123746;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.weather-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #123746;
+    margin-bottom: 12px;
+}
+
+
+.weather-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.weather-title-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    color: #22d3ee;
+    background: rgba(34,211,238,.08);
+    border: 1px solid rgba(34,211,238,.20);
+}
+
+
+.weather-title-icon i {
+    font-size: 17px;
+}
+
+
+.weather-label {
+    display: block;
+    color: #22d3ee;
+    font-size: 7px;
+    letter-spacing: 1px;
+}
+
+
+.weather-title h2 {
+    margin-top: 2px;
+    color: #e5eff2;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.weather-title p {
+    margin-top: 3px;
+    color: #718995;
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   ATUALIZAÇÃO
+========================================================= */
+
+.weather-update {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #647d89;
+    font-size: 12px;
+}
+
+
+.weather-update i {
+    color: #39e75f;
+}
+
+
+/* =========================================================
+   GRID — 8 CARDS EM UMA ÚNICA LINHA
+========================================================= */
+
+.weather-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 6px;
+}
+
+
+/* =========================================================
+   CARD INDIVIDUAL
+========================================================= */
+
+.weather-info-card {
+    min-width: 0;
+    height: 76px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #061b27;
+    border: 1px solid #123847;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: .2s ease;
+}
+
+
+.weather-info-card:hover {
+    border-color: #1e5a62;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ÍCONE
+========================================================= */
+
+.weather-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+
+.weather-icon i {
+    font-size: 14px;
+}
+
+
+/* VERDE */
+
+.weather-icon.green {
+    color: #39e75f;
+    background: rgba(57,231,95,.08);
+    border: 1px solid rgba(57,231,95,.18);
+}
+
+
+/* CIANO */
+
+.weather-icon.cyan {
+    color: #22d3ee;
+    background: rgba(34,211,238,.08);
+    border: 1px solid rgba(34,211,238,.18);
+}
+
+
+/* AZUL */
+
+.weather-icon.blue {
+    color: #38bdf8;
+    background: rgba(56,189,248,.08);
+    border: 1px solid rgba(56,189,248,.18);
+}
+
+
+/* AMARELO */
+
+.weather-icon.yellow {
+    color: #fbbf24;
+    background: rgba(251,191,36,.08);
+    border: 1px solid rgba(251,191,36,.18);
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.weather-info {
+    min-width: 0;
+    overflow: hidden;
+}
+
+
+.weather-info > span {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+}
+
+
+.weather-info strong {
+    display: block;
+    color: #e5eff2;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+
+.weather-info strong small {
+    color: #8199a5;
+    font-size: 7px;
+    margin-left: 2px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.weather-status {
+    display: block;
+    color: #68818d;
+    font-size: 7px;
+    margin-top: 2px;
+}
+
+
+.weather-good {
+    color: #39e75f !important;
+    font-size: 12px !important;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 1300px) {
+
+    .weather-grid {
+
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .weather-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+
+
+
+/* =========================================================
+   SEÇÃO DE EVOLUÇÃO
+========================================================= */
+
+.evolution-section {
+    width: 99%;
+    margin: 0 18px 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   CARD DOS GRÁFICOS
+========================================================= */
+
+.evolution-card {
+    height: 205px;
+    padding: 12px 14px;
+    background: #041722;
+    border: 1px solid #123746;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.evolution-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.evolution-header h3 {
+    color: #dfecef;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2px;
+}
+
+
+.evolution-header h3 span {
+    color: #22d3ee;
+    font-size: 8px;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+
+/* =========================================================
+   LEGENDA
+========================================================= */
+
+.chart-legend {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 9px;
+}
+
+
+.chart-legend span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #718995;
+    font-size: 7px;
+}
+
+
+.legend-line {
+    width: 12px;
+    height: 2px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+
+/* cores das linhas */
+
+.legend-line.temperature {
+    background: #f59e0b;
+}
+
+
+.legend-line.humidity {
+    background: #22d3ee;
+}
+
+
+.legend-line.vpd {
+    background: #39e75f;
+}
+
+
+.legend-line.radiation {
+    background: #fbbf24;
+}
+
+
+.legend-line.leaf-temperature {
+    background: #f59e0b;
+}
+
+
+.legend-line.delta {
+    background: #39e75f;
+}
+
+
+.legend-line.conductance {
+    background: #38bdf8;
+}
+
+
+/* =========================================================
+   ÁREA DO GRÁFICO
+========================================================= */
+
+.chart-container {
+    position: relative;
+    height: 130px;
+    margin-top: 4px;
+}
+
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* =========================================================
+   CONCLUSÃO
+========================================================= */
+
+.system-conclusion {
+    width: 99%;
+    min-height: 105px;
+    margin: 0 18px 20px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-sizing: border-box;
+    background: #041722;
+    border: 1px solid #123746;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   ÍCONE PRINCIPAL
+========================================================= */
+
+.conclusion-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #39e75f;
+}
+
+
+.conclusion-icon i {
+    font-size: 34px;
+    filter: drop-shadow(0 0 6px rgba(57,231,95,.35));
+}
+
+
+/* =========================================================
+   CONCLUSÃO PRINCIPAL
+========================================================= */
+
+.conclusion-main {
+    min-width: 125px;
+}
+
+
+.conclusion-label {
+    display: block;
+    color: #718995;
+    font-size: 10px;
+    letter-spacing: .6px;
+    margin-bottom: 5px;
+}
+
+
+.conclusion-main strong {
+    display: block;
+    color: #39e75f;
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+
+.conclusion-main p {
+    color: #e5eff2;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   DIVISÓRIA
+========================================================= */
+
+.conclusion-divider {
+    width: 1px;
+    height: 48px;
+    background: #123746;
+}
+
+
+/* =========================================================
+   ITENS DA CONCLUSÃO
+========================================================= */
+
+.conclusion-item {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+
+.conclusion-item-icon {
+    width: 29px;
+    height: 29px;
+    min-width: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    color: #8aa1ad;
+    background: rgba(34,211,238,.04);
+    border: 1px solid #123746;
+}
+
+
+.conclusion-item-icon i {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.conclusion-item-title {
+    display: block;
+    color: #9aafb8;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+
+.conclusion-item p {
+    max-width: 430px;
+    color: #718995;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+
+.conclusion-item p i {
+    color: #39e75f;
+    margin-right: 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .evolution-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .system-conclusion {
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .system-conclusion {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+    .conclusion-divider {
+
+        width: 100%;
+
+        height: 1px;
+
+    }
+
+}
+
+main {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+    padding: 10px;
+}

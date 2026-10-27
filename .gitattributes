@@ -1,0 +1,3 @@
+# Preserve original bytes, including mixed line endings, in Git and checkouts.
+/BIOSENSUS_Dashboard_principal/** -text -filter -ident -working-tree-encoding
+/Login_BIOSENSUS/** -text -filter -ident -working-tree-encoding

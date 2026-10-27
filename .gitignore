@@ -1,0 +1,7 @@
+# Conservative repository-root exclusions for future local artifacts.
+# The original interface folders, including .vscode/settings.json, stay tracked.
+/.env
+/.env.local
+/.env.*.local
+/Thumbs.db
+/.DS_Store
