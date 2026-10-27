@@ -1,29 +1,33 @@
 # Pulse — v1.0
 
-**Historical frontend prototype, before the BioSensus name.**
+**The original dashboard prototype, before BioSensus.**
 
-This branch preserves the original `dashboard_inicial.zip` supplied by the project owner as version 1.0. All six files retain their original names, relative paths, and bytes. This historical snapshot was imported on October 27, 2026; its Git commit date is the import date, not the original development date.
+Pulse 1.0 is the first dashboard version of the project. Version 2.0 adopted the BioSensus name to distinguish the project from LG's Pulse brand and includes the BioSensus dashboard and login interfaces.
 
-## Relationship to BioSensus
-
-The owner identifies this dashboard as Pulse 1.0 and the later dashboard and login interfaces as BioSensus 2.0. According to the owner, the project was renamed because LG has a brand with the same name. This records the owner's explanation and does not assert an independently verified trademark or legal finding.
-
-The current project remains on [main](https://github.com/matheuuniumar2/biosensus/tree/main). This historical branch is independently rooted to avoid representing the newly imported snapshot as an actual ancestor of commits that already existed. No existing history was rewritten.
+Browse [BioSensus on main](https://github.com/matheuuniumar2/biosensus/tree/main) for the current project.
 
 ## Contents and technology
 
-`dashboard_inicial/` contains `index.html`, `style_page_1.css`, `dossel.png`, `PULSE.png`, `PULSE__1_-removebg-preview.png`, and `side_bar.png`. The dashboard uses HTML, CSS, inline JavaScript, Chart.js, and Bootstrap Icons 1.11.3. Chart.js and icons are loaded from external CDNs. Chart datasets and displayed measurements are fixed prototype examples. No login files, backend, live weather service, sensors, or operational AI were supplied for v1.0.
+`dashboard_inicial/` contains `index.html`, `style_page_1.css`, `dossel.png`, `PULSE.png`, `PULSE__1_-removebg-preview.png`, and `side_bar.png`.
+
+The dashboard uses HTML, CSS, inline JavaScript, Chart.js, and Bootstrap Icons 1.11.3. Chart.js and icons load from external CDNs. Measurements and chart datasets are fixed demonstration values. Version 1.0 does not include a login interface, backend, live weather integration, sensors, or operational AI.
 
 ## Preview
 
-Serve the original directory as the web root, for example with an existing Python 3 installation:
+Serve `dashboard_inicial/` as the web root. With Python 3 installed:
 
 ```shell
 python -m http.server 8002 --bind 127.0.0.1 --directory dashboard_inicial
 ```
 
-Open http://127.0.0.1:8002/. External resources require internet access. The supplied HTML contains a trailing space in the `/dossel.png ` image reference; it is retained without correction and may affect resource resolution. Other controls are demonstration elements. No code changes or dependency installation were performed.
+Open http://127.0.0.1:8002/. External resources require internet access. The `/dossel.png ` image reference contains a trailing space that may affect resource resolution. Navigation and other controls are demonstration elements.
 
-## Integrity and license
+## Archive and integrity
 
-See [the SHA-256 manifest](docs/original-files.sha256). No project license was authorized or added. This early prototype is not agronomically validated and must not guide field operations.
+The dashboard was archived in this repository on October 27, 2026. The first commit records the archive date rather than the original development date. This branch has a separate history from `main`.
+
+The six original application files retain their original names, paths, and contents. See [the SHA-256 manifest](docs/original-files.sha256). The `v1.0` tag identifies the original archived snapshot; this branch also includes later documentation updates.
+
+## License and development status
+
+A project license has not yet been selected. This frontend prototype has not undergone agronomic validation and must not guide field operations.
