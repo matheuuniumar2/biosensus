@@ -22,14 +22,16 @@ The intended platform will combine qualified weather data, physiological observa
 
 ## Current development
 
-**Frontend Prototype / Early Development.** The initial package includes two separate static interfaces in Brazilian Portuguese. HTML and CSS define the presentation. JavaScript provides limited login interactions and Chart.js charts based on fixed arrays. Images are supplied as PNG files.
+**Frontend Prototype / Early Development.** Version 2.0 includes two separate static interfaces in Brazilian Portuguese. HTML and CSS define the presentation. JavaScript provides limited login interactions and Chart.js charts based on fixed arrays. Images use the PNG format.
 
-There is no supplied backend, authentication service, sensor adapter, live weather integration, AI model, historical data store, or validated decision engine. The dashboard is evidence of the intended presentation, not evidence of those operational capabilities.
+Backend services, authentication, sensor connectivity, live weather integration, AI models, historical data storage, and validated decision support remain planned capabilities.
 
 ## Long-term vision
 
 Create a practical decision-support platform that helps agricultural producers understand crop conditions and improve the timing of field operations. Progress toward this vision requires integration, evaluation, agronomic validation, and responsible deployment.
 
-## Publication boundaries
+## Project history
 
-The first documented version is v2.0. Original names, paths, contents, configuration, and images are preserved in their two supplied folders. Added documentation and Git configuration sit outside those folders. No license, deployment, tag, or release is implied by the publication package.
+The project began as Pulse 1.0 and adopted the BioSensus name in version 2.0 to distinguish it from LG's Pulse brand. Version 1.0 contains the initial dashboard; version 2.0 includes the BioSensus dashboard and login interfaces. Both versions remain frontend prototypes.
+
+See [version history](versions.md) for the available snapshots.

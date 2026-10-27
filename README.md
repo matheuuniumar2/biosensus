@@ -11,7 +11,7 @@
 
 BioSensus is an AgTech project focused on soybean crop monitoring and intelligent spraying window analysis through weather data and plant physiology. It aims to connect environmental conditions, crop physiological responses, and agricultural decisions in one digital environment.
 
-The supplied version consists of two independent frontend prototypes: a login interface and a crop dashboard. The original files are preserved without code or design changes.
+Version 2.0 includes two independent frontend prototypes: a login interface and a crop dashboard.
 
 ## The Problem
 
@@ -19,17 +19,17 @@ Agricultural spraying decisions depend on several interacting factors, including
 
 ## Our Approach
 
-BioSensus proposes bringing weather and plant physiology information together to support the analysis of spraying windows. This publication demonstrates the intended interface and information layout. The operational integrations and validated decision models remain future work.
+BioSensus proposes bringing weather and plant physiology information together to support the analysis of spraying windows. The prototype demonstrates the interface and information layout. The operational integrations and validated decision models remain future work.
 
 ## Current Development Status
 
 **Frontend Prototype / Early Development — v2.0: BioSensus Frontend Prototype.**
 
-This version records an early interface design, not a stable agricultural decision service. Dashboard values and chart series are hard-coded examples. The login script explicitly states that authentication is not connected. No backend, live weather feed, sensor connection, operational AI, or validated agronomic recommendation engine is included.
+Version 2.0 focuses on interface design. Dashboard values and chart series are hard-coded examples, and the login flow is a demonstration without authentication. No backend, live weather feed, sensor connection, operational AI, or validated agronomic recommendation engine is included.
 
 ## Current Features
 
-| Classification | Evidence in the supplied files |
+| Classification | Available functionality |
 | --- | --- |
 | Implemented | HTML/CSS login and dashboard layouts with bundled PNG assets. |
 | Implemented | Login password visibility toggle, required input fields, submission feedback, and password recovery placeholder message. |
@@ -38,11 +38,11 @@ This version records an early interface design, not a stable agricultural decisi
 | Prototype | Login submission and recovery flow; no account verification, session creation, or dashboard redirect. |
 | Planned | Live data ingestion, physiological monitoring, sensors, AI analysis, and validated spraying window recommendations. |
 
-The “remember me” checkbox has visual state styling; persistence is not implemented. Several dashboard controls are presentation elements or `#` links. Interface labels such as “updated now” describe the mockup and do not prove live updates.
+The “remember me” checkbox has visual state styling; persistence is not implemented. Several dashboard controls are presentation elements or `#` links. Labels such as “updated now” are part of the demonstration; values do not update from live sources.
 
 ### Interface Preview
 
-Actual browser captures of the unchanged supplied interfaces, taken on October 27, 2026. The dashboard displays prototype data.
+Dashboard and login interfaces in version 2.0. Screenshots captured on October 27, 2026; displayed values are demonstration data.
 
 ![BioSensus dashboard prototype](docs/screenshots/dashboard.png)
 
@@ -64,13 +64,13 @@ The following capabilities are **planned**, not operational in this version:
 
 - HTML5 and CSS, including media queries.
 - Vanilla JavaScript for login interactions and inline dashboard chart configuration.
-- Chart.js loaded from jsDelivr; the supplied URL does not pin a version.
-- Bootstrap Icons 1.11.3 loaded from jsDelivr; this is an icon library, not evidence of the Bootstrap UI framework.
+- Chart.js loaded from jsDelivr; the CDN URL does not pin a version.
+- Bootstrap Icons 1.11.3 loaded from jsDelivr; used for interface icons.
 - Google Fonts (Inter) imported by the login stylesheet.
 - Bundled PNG images.
-- An original VS Code Live Server port setting in `Login_BIOSENSUS/.vscode/settings.json`.
+- A VS Code Live Server port setting in `Login_BIOSENSUS/.vscode/settings.json`.
 
-No package manifest, dependency installation step, application framework, or build pipeline was supplied. External fonts, icons, and charts require internet access.
+The frontend runs as static files, without a package manager or build step. External fonts, icons, and charts require internet access.
 
 ## Project Structure
 
@@ -105,7 +105,7 @@ No package manifest, dependency installation step, application framework, or bui
     └── logo-biosenus.png
 ```
 
-Both supplied folders are retained because they contain separate entry points and assets with overlapping names. They are not merged into an artificial application structure. Added files are confined to the repository root and `docs/`.
+The dashboard and login each have their own entry point and assets. Project documentation is in the repository root and `docs/`.
 
 ## Getting Started
 
@@ -125,7 +125,7 @@ python -m http.server 8001 --bind 127.0.0.1 --directory Login_BIOSENSUS
 
 Open [the dashboard](http://127.0.0.1:8000/) and [the login](http://127.0.0.1:8001/) in your browser. On Windows, `py` may replace `python` if that is the installed launcher. Python is an optional static preview tool, not an application dependency. Stop each server with Ctrl+C when finished.
 
-Alternatively, use an existing static web server with each original folder configured as its root. If using VS Code Live Server, open the individual interface folder as the workspace; the supplied login workspace setting specifies port 5502.
+Alternatively, use an existing static web server with each original folder configured as its root. If using VS Code Live Server, open the individual interface folder as the workspace; the login workspace setting specifies port 5502.
 
 No installation, build, or code modification is required for a static preview. The login and dashboard are independent; submitting the login does not open the dashboard. Use dummy input when inspecting the demonstration.
 
@@ -148,11 +148,11 @@ The long-term goal is a practical precision agriculture platform that transforms
 
 ## Contributing
 
-Propose changes through issues and pull requests. Describe the problem, evidence, intended scope, and validation. Changes to the original application must be explicitly reviewed as future development rather than silently incorporated into this publication. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Propose changes through issues and pull requests. Describe the problem, evidence, intended scope, and validation. Keep changes focused and include validation appropriate to their scope. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-No project license has been selected or authorized for this publication. No MIT, Apache, or other open-source license is granted by this repository. Obtain permission from the rights holder before reuse or redistribution. External libraries and assets may carry separate terms; their availability does not license the project as a whole.
+A project license has not yet been selected. Obtain permission from the rights holder before reuse or redistribution. External libraries and assets may carry separate terms; their availability does not license the project as a whole.
 
 ## Disclaimer
 
@@ -160,6 +160,8 @@ BioSensus is under development. Displayed data, status labels, and conclusions a
 
 ## Version History and Integrity
 
-See [CHANGELOG.md](CHANGELOG.md), [versioning guidance](docs/versions.md), and the [SHA-256 manifest of original files](docs/original-files.sha256). The owner identifies the current supplied files as **v2.0 — BioSensus**, following **v1.0 — Pulse**. The original GitHub publication temporarily used `v0.1.0` before this history was clarified; that label was publication metadata, not a separate application version. It remains visible in earlier commits.
+BioSensus 2.0 follows the original Pulse 1.0 dashboard. The project adopted the BioSensus name to distinguish it from LG's Pulse brand.
 
-The original Pulse files are preserved on [history/pulse-v1.0](https://github.com/matheuuniumar2/biosensus/tree/history/pulse-v1.0) and tagged `v1.0`. The current BioSensus snapshot is tagged `v2.0`. These tags do not imply production readiness or published GitHub releases. According to the owner, the name changed because LG has a brand with the same name; this explanation has not been independently verified as a legal finding.
+Browse [Pulse 1.0](https://github.com/matheuuniumar2/biosensus/tree/history/pulse-v1.0) for the historical dashboard or stay on `main` for the current project. The `v1.0` and `v2.0` tags identify the original version snapshots.
+
+See [CHANGELOG.md](CHANGELOG.md), [version history](docs/versions.md), and the [SHA-256 manifest](docs/original-files.sha256) for release context and file integrity information.

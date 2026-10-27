@@ -1,12 +1,12 @@
 # Development Roadmap
 
-This roadmap describes intended directions, not delivery commitments. No dates are promised. Only the initial interface artifacts are present in v2.0.
+This roadmap describes intended directions, not delivery commitments. No dates are promised. Version 2.0 includes the initial dashboard and login interfaces.
 
 ## Phase 1: Frontend Prototype
 
 **Status: initial artifacts present; ongoing.**
 
-The supplied login and dashboard establish initial layouts and limited browser interactions. Future work may review usability, accessibility, interface consistency, and navigation. That work is outside the original-file publication scope.
+The login and dashboard establish initial layouts and basic browser interactions. Future work may review usability, accessibility, interface consistency, and navigation. These improvements belong to the next frontend development cycle.
 
 ## Phase 2: Weather Data Integration
 
