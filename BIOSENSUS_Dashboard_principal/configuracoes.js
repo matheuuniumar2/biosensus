@@ -1,0 +1,10 @@
+const saveBtn=document.getElementById('salvar');
+const resetBtn=document.getElementById('resetar');
+const msg=document.getElementById('saveMessage');
+const fields=[...document.querySelectorAll('.config-card input:not([type="checkbox"]), .config-card select')];
+const initial=fields.map(el=>el.value);
+saveBtn.addEventListener('click',()=>{msg.textContent='Configurações salvas nesta sessão.';setTimeout(()=>msg.textContent='',3000)});
+resetBtn.addEventListener('click',()=>{fields.forEach((el,i)=>el.value=initial[i]);document.querySelectorAll('.switch input').forEach((el,i)=>el.checked=[true,true,false,true][i]??false);msg.textContent='Valores padrão restaurados.';setTimeout(()=>msg.textContent='',3000)});
+document.querySelectorAll('.delete-plot').forEach(btn=>btn.addEventListener('click',()=>{if(confirm('Deseja remover este talhão da visualização?'))btn.closest('.plot-config').remove()}));
+document.querySelectorAll('.edit-plot').forEach(btn=>btn.addEventListener('click',()=>{const card=btn.closest('.plot-config');const name=prompt('Nome do talhão:',card.querySelector('.plot-title').childNodes[0].textContent.trim());if(name&&name.trim())card.querySelector('.plot-title').childNodes[0].textContent=name.trim()+' '}));
+document.getElementById('novoTalhao').addEventListener('click',()=>{const nome=prompt('Nome do novo talhão:');if(!nome||!nome.trim())return;const area=prompt('Área do talhão em hectares:','0');if(area===null||!Number.isFinite(Number(area))||Number(area)<=0){alert('Informe uma área válida.');return}const cultura=prompt('Cultura plantada:','Soja')||'Não informada';const card=document.createElement('article');card.className='plot-config';card.innerHTML=`<div class="plot-title"></div><p></p><p></p><em>Estádio não informado</em>`;card.querySelector('.plot-title').textContent=nome.trim();card.querySelectorAll('p')[0].textContent=`Área: ${Number(area)} ha`;card.querySelectorAll('p')[1].textContent=`Cultura: ${cultura}`;document.getElementById('plotsGrid').appendChild(card)});

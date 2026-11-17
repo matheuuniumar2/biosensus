@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIOSENSUS | Histórico</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style_page_1.css">
+  <link rel="stylesheet" href="historico.css">
+</head>
+<body>
+  <header class="navbar">
+    <img src="logo-biosenus.png" alt="BIOSENSUS" class="logo">
+    <span style="font-size: 15px;">BIOSENSUS</span>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i><span>Dashboard</span></a>
+      <a href="historico.html" class="nav-link active"><i class="bi bi-clock-history"></i><span>Histórico</span></a>
+      <a href="configuracoes.html" class="nav-link"><i class="bi bi-gear"></i><span>Configurações</span></a>
+    </nav>
+    <div class="navbar-right">
+      <button class="notification" aria-label="Notificações"><i class="bi bi-bell"></i><span class="notification-dot"></span></button>
+      <div class="nav-separator"></div>
+      <div class="user">
+        <div class="avatar"><i class="bi bi-person-fill"></i></div>
+        <div class="user-info"><strong>Administrador</strong><span>Fazenda Santa Rita</span></div>
+        <i class="bi bi-chevron-down user-arrow"></i>
+      </div>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="farm">
+        <div class="farm-icon"><i class="bi bi-leaf"></i></div>
+        <div class="farm-info"><strong>Fazenda Santa Rita</strong><span>São Paulo - SP</span></div>
+        <i class="bi bi-chevron-down farm-arrow"></i>
+      </div>
+      <div class="plots-title">Talhões</div>
+      <div id="plotList">
+        <button class="plot active" data-plot="03"><div class="plot-icon"><i class="bi bi-geo-alt-fill"></i></div><div class="plot-info"><strong>Talhão 03</strong><span>Soja | V5 | 42,5 ha</span></div></button>
+        <button class="plot" data-plot="04"><div class="plot-icon"><i class="bi bi-geo-alt"></i></div><div class="plot-info"><strong>Talhão 04</strong><span>Soja | V3 | 38,2 ha</span></div></button>
+        <button class="plot" data-plot="05"><div class="plot-icon"><i class="bi bi-geo-alt"></i></div><div class="plot-info"><strong>Talhão 05</strong><span>Milho | V6 | 56,7 ha</span></div></button>
+        <button class="plot" data-plot="06"><div class="plot-icon"><i class="bi bi-geo-alt"></i></div><div class="plot-info"><strong>Talhão 06</strong><span>Soja | R1 | 29,4 ha</span></div></button>
+      </div>
+      <button class="new-plot" id="newPlot"><i class="bi bi-plus-lg"></i><span>Novo Talhão</span></button>
+    </div>
+    <div class="sidebar-bottom">
+      <div class="farm-image"><img src="sidebar-image.png" alt=""></div>
+      <div class="farm-message"><p>Mais dados.<br>Melhores decisões.<br>Mais produtividade.</p></div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <section class="toolbar">
+      <div class="date-range"><i class="bi bi-calendar3"></i><span id="dateLabel">07/05/2026 - 13/05/2026</span></div>
+      <div class="period-buttons" role="group" aria-label="Período do histórico">
+        <button class="period active" data-days="7">7 dias</button><button class="period" data-days="15">15 dias</button><button class="period" data-days="30">30 dias</button>
+        <button class="period" id="customPeriod">Personalizado</button>
+      </div>
+      <button class="export-btn" id="exportCsv"><i class="bi bi-download"></i> Exportar Relatório (CSV)</button>
+    </section>
+
+    <section class="panel chart-panel">
+      <div class="panel-heading"><div><h1>Evolução Temporal dos Indicadores</h1><p>Histórico consolidado do microclima e atividade foliar do dossel</p></div>
+        <div class="legend"><span><i class="dot green"></i> Temperatura foliar (°C)</span><span><i class="dot orange"></i> ΔT Folha-Ar (°C)</span><span><i class="dot cyan"></i> gs condutância (mol/m²/s)</span></div>
+      </div>
+      <div class="chart-wrap"><canvas id="historyChart" aria-label="Gráfico de evolução temporal dos indicadores"></canvas></div>
+    </section>
+
+    <section class="panel readings-panel">
+      <div class="readings-heading"><div><h2 id="tableTitle">Histórico de Leituras - Talhão 03</h2><p>Registro completo dos sensores e satélites nas últimas datas mostradas</p></div>
+        <label class="search-box"><i class="bi bi-search"></i><input id="searchInput" type="search" placeholder="Buscar registro..." aria-label="Buscar registro"></label>
+      </div>
+      <div class="table-scroll"><table><thead><tr><th>Data/Hora</th><th>Temp. ar</th><th>Umidade</th><th>Vel. vento</th><th>Radiação solar</th><th>VPD</th><th>Status</th></tr></thead><tbody id="readingsBody"></tbody></table></div>
+      <div class="table-footer"><span id="rowCount">6 registros</span><span class="demo-note"><i class="bi bi-info-circle"></i> Dados demonstrativos do protótipo</span></div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="historico.js"></script>
+</body>
+</html>

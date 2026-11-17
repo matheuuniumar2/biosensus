@@ -3,7 +3,7 @@
 **Connecting Weather, Plant Physiology and Smarter Agricultural Decisions.**
 
 ![Status: Frontend Prototype](https://img.shields.io/badge/status-frontend%20prototype-orange)
-![Version: 2.0](https://img.shields.io/badge/version-2.0-blue)
+![Version: 3.0](https://img.shields.io/badge/version-3.0-blue)
 ![Stack: HTML, CSS, JavaScript](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JavaScript-147d64)
 ![License: Not specified](https://img.shields.io/badge/license-not%20specified-lightgrey)
 
@@ -11,7 +11,7 @@
 
 BioSensus is an AgTech project focused on soybean crop monitoring and intelligent spraying window analysis through weather data and plant physiology. It aims to connect environmental conditions, crop physiological responses, and agricultural decisions in one digital environment.
 
-Version 2.0 includes two independent frontend prototypes: a login interface and a crop dashboard.
+Version 3.0 expands the crop dashboard with History and Settings screens. The login remains a separate frontend prototype.
 
 ## The Problem
 
@@ -23,9 +23,9 @@ BioSensus proposes bringing weather and plant physiology information together to
 
 ## Current Development Status
 
-**Frontend Prototype / Early Development — v2.0: BioSensus Frontend Prototype.**
+**Frontend Prototype / Early Development — v3.0: Dashboard, History, and Settings.**
 
-Version 2.0 focuses on interface design. Dashboard values and chart series are hard-coded examples, and the login flow is a demonstration without authentication. No backend, live weather feed, sensor connection, operational AI, or validated agronomic recommendation engine is included.
+Version 3.0 demonstrates frontend navigation, historical readings, and configuration. Dashboard values and chart series are hard-coded examples, and the login flow is a demonstration without authentication. No backend, live weather feed, sensor connection, operational AI, or validated agronomic recommendation engine is included.
 
 ## Current Features
 
@@ -34,6 +34,8 @@ Version 2.0 focuses on interface design. Dashboard values and chart series are h
 | Implemented | HTML/CSS login and dashboard layouts with bundled PNG assets. |
 | Implemented | Login password visibility toggle, required input fields, submission feedback, and password recovery placeholder message. |
 | Implemented | Two Chart.js line charts driven by fixed arrays embedded in the dashboard HTML. |
+| Implemented | Dashboard, History, and Settings navigation. History includes field selection, table search, period controls, a demonstration chart, and CSV export for the selected field. |
+| Prototype | Settings controls for profile and notification preferences, reset, and field management in the current page. |
 | Prototype | Farm and field navigation, canopy temperature image, physiological indicators, weather cards, and a system conclusion panel. |
 | Prototype | Login submission and recovery flow; no account verification, session creation, or dashboard redirect. |
 | Planned | Live data ingestion, physiological monitoring, sensors, AI analysis, and validated spraying window recommendations. |
@@ -57,13 +59,13 @@ The following capabilities are **planned**, not operational in this version:
 - IoT sensor connectivity.
 - AI-assisted analysis.
 - Spraying window recommendations.
-- Historical agricultural data analysis.
+- Historical agricultural data analysis using integrated data sources.
 - Decision-support dashboards connected to validated data sources.
 
 ## Technology Stack
 
 - HTML5 and CSS, including media queries.
-- Vanilla JavaScript for login interactions and inline dashboard chart configuration.
+- Vanilla JavaScript for login and settings interactions, history charts and CSV export, and inline dashboard chart configuration.
 - Chart.js loaded from jsDelivr; the CDN URL does not pin a version.
 - Bootstrap Icons 1.11.3 loaded from jsDelivr; used for interface icons.
 - Google Fonts (Inter) imported by the login stylesheet.
@@ -93,6 +95,8 @@ The frontend runs as static files, without a package manager or build step. Exte
 ├── BIOSENSUS_Dashboard_principal/
 │   ├── index.html
 │   ├── style_page_1.css
+│   ├── historico.html, historico.css, historico.js
+│   ├── configuracoes.html, configuracoes.css, configuracoes.js
 │   ├── logo-biosenus.png
 │   ├── sidebar-image.png
 │   └── talhão-ideal.png
@@ -109,9 +113,9 @@ The dashboard and login each have their own entry point and assets. Project docu
 
 ## Getting Started
 
-1. Open the repository on GitHub. While it is private, sign in with an account that has access.
+1. Open the repository on GitHub.
 2. Select **Code → Download ZIP**, extract the download, and open the extracted repository folder.
-3. Serve **each original interface folder as its own web root**. The HTML uses root-relative image paths such as `/logo-biosenus.png`, so serving the repository root or opening HTML directly may leave images unresolved.
+3. Serve each interface folder as a static site. The dashboard, history, and settings also work when served under the `BIOSENSUS_Dashboard_principal/` subdirectory.
 
 If Python 3 is already available, open two terminals in the extracted repository folder and run:
 
@@ -129,7 +133,7 @@ Alternatively, use an existing static web server with each original folder confi
 
 No installation, build, or code modification is required for a static preview. The login and dashboard are independent; submitting the login does not open the dashboard. Use dummy input when inspecting the demonstration.
 
-See [known limitations](docs/known-limitations.md) for details about placeholder controls, external resources, and the original dashboard title.
+See [known limitations](docs/known-limitations.md) for details about sample data, placeholder controls, and external resources.
 
 ## Development Roadmap
 
@@ -160,8 +164,8 @@ BioSensus is under development. Displayed data, status labels, and conclusions a
 
 ## Version History and Integrity
 
-BioSensus 2.0 follows the original Pulse 1.0 dashboard. The project adopted the BioSensus name to distinguish it from LG's Pulse brand.
+BioSensus 3.0 expands the BioSensus 2.0 prototype, which follows the original Pulse 1.0 dashboard. The project adopted the BioSensus name to distinguish it from LG's Pulse brand.
 
-Browse [Pulse 1.0](https://github.com/matheuuniumar2/biosensus/tree/history/pulse-v1.0) for the historical dashboard or stay on `main` for the current project. The `v1.0` and `v2.0` tags identify the original version snapshots.
+Browse [Pulse 1.0](https://github.com/matheuuniumar2/biosensus/tree/history/pulse-v1.0) for the historical dashboard or stay on `main` for the current project. The [v1.0](https://github.com/matheuuniumar2/biosensus/tree/v1.0) and [v2.0](https://github.com/matheuuniumar2/biosensus/tree/v2.0) tags identify the original version snapshots.
 
 See [CHANGELOG.md](CHANGELOG.md), [version history](docs/versions.md), and the [SHA-256 manifest](docs/original-files.sha256) for release context and file integrity information.

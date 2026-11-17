@@ -22,7 +22,7 @@ The intended platform will combine qualified weather data, physiological observa
 
 ## Current development
 
-**Frontend Prototype / Early Development.** Version 2.0 includes two separate static interfaces in Brazilian Portuguese. HTML and CSS define the presentation. JavaScript provides limited login interactions and Chart.js charts based on fixed arrays. Images use the PNG format.
+**Frontend Prototype / Early Development.** Version 3.0 includes a dashboard with History and Settings screens, plus a separate login interface. The interfaces are in Brazilian Portuguese. HTML and CSS define the presentation. JavaScript handles browser interactions, charts based on fixed arrays, and export of example readings as CSV. Images use the PNG format.
 
 Backend services, authentication, sensor connectivity, live weather integration, AI models, historical data storage, and validated decision support remain planned capabilities.
 
@@ -32,6 +32,6 @@ Create a practical decision-support platform that helps agricultural producers u
 
 ## Project history
 
-The project began as Pulse 1.0 and adopted the BioSensus name in version 2.0 to distinguish it from LG's Pulse brand. Version 1.0 contains the initial dashboard; version 2.0 includes the BioSensus dashboard and login interfaces. Both versions remain frontend prototypes.
+The project began as Pulse 1.0 and adopted the BioSensus name in version 2.0 to distinguish it from LG's Pulse brand. Version 1.0 contains the initial dashboard; version 2.0 includes the BioSensus dashboard and login interfaces. Version 3.0 adds History and Settings to the dashboard. All versions remain frontend prototypes.
 
 See [version history](versions.md) for the available snapshots.

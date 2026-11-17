@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.0 — Dashboard, History, and Settings
+
+- Connected the dashboard to dedicated History and Settings screens.
+- Added demonstration readings by field, table search, period controls, a canvas chart, and CSV export for the selected field.
+- Added profile and notification controls, a reset action, and a demonstration of field management in Settings.
+- Updated BioSensus branding and made dashboard image paths work when served from a subdirectory. Fixed History initialization and navigation to Settings.
+
 ## Documentation updates — 2026-10-27
 
 - Revised project descriptions, version history, contribution guidance, and limitations for a consistent project voice.
