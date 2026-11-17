@@ -469,7 +469,7 @@
                     rgba(2,13,21,0.95) 100%
                 ),
 
-                url("img/lavoura.jpg");
+                url("sidebar-image.png");
             background-size: cover;
             background-position: center;
         }

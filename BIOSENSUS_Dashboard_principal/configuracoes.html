@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIOSENSUS | Configurações</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style_page_1.css"><link rel="stylesheet" href="configuracoes.css">
+</head><body>
+<header class="navbar">
+        <img
+            src="logo-biosenus.png"
+            alt="PULSE"
+            class="logo"
+        >
+        <span style="font-size: 15px;">BIOSENSUS</span>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i><span>Dashboard</span></a>
+            <a href="historico.html" class="nav-link"><i class="bi bi-clock-history"></i><span>Histórico</span></a>
+            <a href="configuracoes.html" class="nav-link active"><i class="bi bi-gear"></i><span>Configurações</span></a>
+        </nav>
+
+
+        <!-- DIREITA -->
+        <div class="navbar-right">
+            <button class="notification"><i class="bi bi-bell"></i><span class="notification-dot"></span></button>
+            <div class="nav-separator"></div>
+
+            <div class="user">
+
+
+                <div class="avatar">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+
+                <div class="user-info">
+                    <strong>Administrador</strong>
+                    <span>Fazenda Santa Rita</span>
+                </div>
+
+
+                <i class="bi bi-chevron-down user-arrow"></i>
+            </div>
+        </div>
+    </header>
+<aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="farm">
+                <div class="farm-icon">
+                    <i class="bi bi-leaf"></i>
+                </div>
+                <div class="farm-info">
+                    <strong>
+                        Fazenda Santa Rita
+                    </strong>
+                    <span>
+                        São Paulo - SP
+                    </span>
+                </div>
+                <i class="bi bi-chevron-down farm-arrow"></i>
+            </div>
+
+
+            
+<!-- TÍTULO -->
+
+            <div class="plots-title">Talhões</div>
+
+
+            <!-- TALHÃO 03 -->
+
+            <button class="plot active">
+                <div class="plot-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div class="plot-info">
+                    <strong>Talhão 03</strong>
+
+                    <span> Soja | V5 | 42,5 ha</span>
+                </div>
+            </button>
+
+
+            <!-- TALHÃO 04 -->
+
+            <button class="plot">
+                <div class="plot-icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="plot-info">
+                    <strong>Talhão 04</strong>
+
+                    <span>Soja | V3 | 38,2 ha</span>
+                </div>
+            </button>
+
+
+            <!-- TALHÃO 05 -->
+
+            <button class="plot ">
+                <div class="plot-icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="plot-info">
+
+                    <strong>Talhão 05</strong>
+
+                    <span>Milho | V6 | 56,7 ha</span>
+                </div>  
+            </button>
+
+
+            <!-- TALHÃO 06 -->
+
+            <button class="plot">
+                <div class="plot-icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="plot-info">
+                    <strong>Talhão 06</strong>
+                    <span>Soja | R1 | 29,4 ha</span>
+                </div>
+            </button>
+
+
+            <!-- NOVO TALHÃO -->
+
+            <button class="new-plot">
+                <i class="bi bi-plus-lg"></i>
+                <span>Novo Talhão</span>
+            </button>
+        </div>
+
+
+
+        <!-- =================================================
+             FOTO
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+            <div class="farm-image">
+                <img src="sidebar-image.png" alt="">
+            </div>
+
+            <div class="farm-message">
+                <p>
+                    Mais dados.<br>
+                    Melhores decisões.<br>
+                    Mais produtividade.
+                </p>
+            </div>
+        </div>
+    </aside>
+<main class="main config-main">
+  <div class="config-grid">
+    <div class="config-left">
+      <section class="config-card profile-card">
+        <h2>Perfil do Usuário</h2>
+        <div class="fields-grid">
+          <label>Nome Completo<input id="nome" value="Carlos S. Ribeiro"></label>
+          <label>E-mail principal<input id="email" type="email" value="carlos.ribeiro@example.com"></label>
+          <label>Fazenda Padrão<input id="fazenda" value="Fazenda Santa Rita"></label>
+          <label>Idioma de preferência<select id="idioma"><option>Português (Brasil)</option><option>English</option><option>Español</option></select></label>
+        </div>
+      </section>
+      <section class="config-card limits-card">
+        <h2>Limiares de Alerta Fisiológico</h2>
+        <p class="card-description">Configure as faixas operacionais e fisiológicas ideais. Valores fora desses intervalos acionarão alertas automáticos no dashboard.</p>
+        <div class="fields-grid">
+          <label>Temperatura foliar máxima (°C)<input type="number" step="0.1" value="35.0"></label>
+          <label>Temperatura foliar mínima (°C)<input type="number" step="0.1" value="15.0"></label>
+          <label>VPD crítico máximo (kPa)<input type="number" step="0.1" value="2.2"></label>
+          <label>Umidade do solo mínima (%)<input type="number" step="1" value="20.0"></label>
+          <label>Condutância mínima (gs)<input type="number" step="0.01" value="0.15"></label>
+          <label>ΔT limite folha-ar (°C)<input type="number" step="0.1" value="-2.0"></label>
+        </div>
+      </section>
+    </div>
+    <div class="config-right">
+      <section class="config-card alerts-card">
+        <h2>Alertas e Notificações</h2>
+        <div class="alert-row"><div><strong>Estresse Hídrico Crítico</strong><p>Notificar imediatamente caso o estresse hídrico mude para Alto.</p></div><label class="switch"><input type="checkbox" checked><span></span></label></div>
+        <div class="alert-row"><div><strong>Temperatura de Dossel Extrema</strong><p>Enviar e-mail se o talhão registrar temperatura foliar superior a 35°C.</p></div><label class="switch"><input type="checkbox" checked><span></span></label></div>
+        <div class="alert-row"><div><strong>VPD Fora da Faixa Recomendada</strong><p>Notificar no aplicativo quando o VPD ultrapassar limites.</p></div><label class="switch"><input type="checkbox"><span></span></label></div>
+        <div class="alert-row"><div><strong>Queda Rápida de Umidade de Solo</strong><p>Alertar quando o teor de água cair mais de 5% em 12 horas.</p></div><label class="switch"><input type="checkbox" checked><span></span></label></div>
+      </section>
+      <section class="config-card integrations-card">
+        <h2>Integrações e Sensores Ativos</h2>
+        <div class="sensor-row"><i class="bi bi-thermometer-half sensor-icon"></i><div><strong>Estação Meteorológica Hobo</strong><p>S/N: 2049921 - Online</p></div><span class="status">ATIVO</span></div>
+        <div class="sensor-row"><i class="bi bi-cloud sensor-icon"></i><div><strong>API Sentinel-2 Copérnico</strong><p>Leituras multiespectrais automáticas</p></div><span class="status">ATIVO</span></div>
+      </section>
+    </div>
+  </div>
+  <section class="config-card plots-card">
+    <div class="plots-heading"><div><h2>Gerenciamento de Talhões</h2><p class="card-description">Adicione, remova ou edite as propriedades geográficas e de plantio das suas parcelas de terra.</p></div><button class="primary-btn" id="novoTalhao"><i class="bi bi-plus-lg"></i> Novo Talhão</button></div>
+    <div class="plots-grid" id="plotsGrid">
+      <article class="plot-config"><div class="plot-title">Talhão 03 <span><button title="Editar" class="edit-plot"><i class="bi bi-pencil-square"></i></button><button title="Excluir" class="delete-plot"><i class="bi bi-trash-fill"></i></button></span></div><p>Área: 42.5 ha</p><p>Cultura: Soja</p><em>Estádio V5</em></article>
+      <article class="plot-config"><div class="plot-title">Talhão 04 <span><button title="Editar" class="edit-plot"><i class="bi bi-pencil-square"></i></button><button title="Excluir" class="delete-plot"><i class="bi bi-trash-fill"></i></button></span></div><p>Área: 38.2 ha</p><p>Cultura: Soja</p><em>Estádio V3</em></article>
+      <article class="plot-config"><div class="plot-title">Talhão 05 <span><button title="Editar" class="edit-plot"><i class="bi bi-pencil-square"></i></button><button title="Excluir" class="delete-plot"><i class="bi bi-trash-fill"></i></button></span></div><p>Área: 56.7 ha</p><p>Cultura: Milho</p><em>Estádio V6</em></article>
+      <article class="plot-config"><div class="plot-title">Talhão 06 <span><button title="Editar" class="edit-plot"><i class="bi bi-pencil-square"></i></button><button title="Excluir" class="delete-plot"><i class="bi bi-trash-fill"></i></button></span></div><p>Área: 29.4 ha</p><p>Cultura: Soja</p><em>Estádio R1</em></article>
+    </div>
+  </section>
+  <div class="config-actions"><span id="saveMessage" role="status"></span><button class="secondary-btn" id="resetar">Restaurar padrão</button><button class="primary-btn" id="salvar"><i class="bi bi-check2"></i> Salvar configurações</button></div>
+</main>
+<script src="configuracoes.js"></script>
+</body></html>

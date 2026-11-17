@@ -5,9 +5,10 @@
 | Version | Name | Contents | Browse |
 | --- | --- | --- | --- |
 | v1.0 | Pulse | Initial dashboard with six source and image files | [Historical branch](https://github.com/matheuuniumar2/biosensus/tree/history/pulse-v1.0) |
-| v2.0 | BioSensus | Dashboard and login interfaces with eleven source, configuration, and image files | [Current branch](https://github.com/matheuuniumar2/biosensus/tree/main) |
+| v2.0 | BioSensus | Dashboard and login interfaces with eleven source, configuration, and image files | [v2.0 snapshot](https://github.com/matheuuniumar2/biosensus/tree/v2.0) · [Historical branch](https://github.com/matheuuniumar2/biosensus/tree/history/biosensus-v2.0) |
+| v3.0 | BioSensus | Dashboard, History, and Settings screens, plus the independent login prototype | [Current branch](https://github.com/matheuuniumar2/biosensus/tree/main) |
 
-The project adopted the BioSensus name in version 2.0 to distinguish it from LG's Pulse brand. Both versions are frontend prototypes with demonstration data.
+The project adopted the BioSensus name in version 2.0 to distinguish it from LG's Pulse brand. All versions are frontend prototypes with demonstration data.
 
 ## Repository history
 
@@ -15,7 +16,7 @@ BioSensus 2.0 was the first version published in this repository. The initial do
 
 The Pulse 1.0 dashboard was archived on October 27, 2026 in `history/pulse-v1.0`. Its first commit records the archive date rather than the original development date. The historical branch has a separate root, while `main` retains the BioSensus development history.
 
-Each version has a SHA-256 manifest for its original application files. Documentation updates do not change those files.
+The v1.0 and v2.0 snapshots each have a SHA-256 manifest for their original application files. Documentation updates do not change those files.
 
 ## Branches, tags, and releases
 

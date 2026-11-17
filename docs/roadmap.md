@@ -1,12 +1,12 @@
 # Development Roadmap
 
-This roadmap describes intended directions, not delivery commitments. No dates are promised. Version 2.0 includes the initial dashboard and login interfaces.
+This roadmap describes intended directions, not delivery commitments. No dates are promised. Version 3.0 includes the dashboard, History and Settings screens, and the independent login interface.
 
 ## Phase 1: Frontend Prototype
 
 **Status: initial artifacts present; ongoing.**
 
-The login and dashboard establish initial layouts and basic browser interactions. Future work may review usability, accessibility, interface consistency, and navigation. These improvements belong to the next frontend development cycle.
+The login and dashboard establish initial layouts and basic browser interactions. The dashboard now links to History and Settings. Future work may review usability, accessibility, interface consistency, and navigation. These improvements belong to the next frontend development cycle.
 
 ## Phase 2: Weather Data Integration
 
